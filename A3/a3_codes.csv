@@ -1,1 +1,10 @@
 observation,theme
+User asked Claude and ChatGPT to count how many Google Form respondents had used Airbnb fewer than 4 times.,what the user asked
+All three Claude runs gave the same answer.,same answer each time
+"Claude's runs differed only in how they referred to the earlier chat, noting the answer matched the previous one.",wording changed
+"ChatGPT gave a consistent answer to the same question, but its wording varied between runs.",same answer each time
+Claude's wording made the answer seem like 8 (used Airbnb at least once but fewer than 4 times) instead of 11 (everyone under 4 times).,confusing wording
+"User was confused at first, then understood the answer after reading it more carefully.",user was confused
+User was frustrated that Claude showed so much unnecessary information.,too much information
+User checked both answers by reading through the spreadsheet and confirmed they were correct.,checked the answer
+User said they liked ChatGPT's response more.,user's favorite
