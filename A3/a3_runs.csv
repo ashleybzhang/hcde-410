@@ -1,1 +1,108 @@
 run,prompt,model,version,timestamp,output,verified,notes
+1,"You are a data evaluation assistant. I am providing a raw CSV dataset of sports team tryout applications.
+
+Your task is to audit the dataset for payment anomalies and discrepancies. Specifically, look for two types of issues:
+
+1. High-Risk Rows: Look for applicants where ""Check In"" is True but ""Payment Confirmation"" is False (people checked in who haven't paid).
+2. Processing Discrepancies: Look for applicants where ""Payment Confirmation"" is True but ""Check In"" is False (people who have paid but are not marked as checked in).
+
+Please output your findings in the following format:
+
+### 🚨 High-Risk (Checked In but Unpaid)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+### ⚠️ Processing Discrepancies (Paid but Not Checked In)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+Here is the raw data:",Claude,Sonnet 5.5 (Medium),2026-11-03 14:16,"🚨 High-Risk (Checked In but Unpaid)
+Total Found: 2
+List of Applicants:
+Name: Eric Jun Seagren | Email: ejs19@uw.edu | Payment Method: Cash
+Name: Xingda | Email: xlyu18@uw.edu | Payment Method: Zelle: husky.badminton@gmail.com
+
+⚠️ Processing Discrepancies (Paid but Not Checked In)
+Total Found: 0
+List of Applicants: None",yes,"Followed the requested format. Found 2 checked in but unpaid, 0 paid but not checked in."
+2,"You are a data evaluation assistant. I am providing a raw CSV dataset of sports team tryout applications.
+
+Your task is to audit the dataset for payment anomalies and discrepancies. Specifically, look for two types of issues:
+
+1. High-Risk Rows: Look for applicants where ""Check In"" is True but ""Payment Confirmation"" is False (people checked in who haven't paid).
+2. Processing Discrepancies: Look for applicants where ""Payment Confirmation"" is True but ""Check In"" is False (people who have paid but are not marked as checked in).
+
+Please output your findings in the following format:
+
+### 🚨 High-Risk (Checked In but Unpaid)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+### ⚠️ Processing Discrepancies (Paid but Not Checked In)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+Here is the raw data:",Claude,Sonnet 5.5 (Medium),2026-11-03 14:16,"🚨 High-Risk (Checked In but Unpaid)
+Total Found: 2
+List of Applicants:
+Name: Eric Jun Seagren | Email: ejs19@uw.edu | Payment Method: Cash
+Name: Xingda | Email: xlyu18@uw.edu | Payment Method: Zelle: husky.badminton@gmail.com
+
+⚠️ Processing Discrepancies (Paid but Not Checked In)
+Total Found: 0
+List of Applicants: None",yes,Same result and format as run 1.
+3,"You are a data evaluation assistant. I am providing a raw CSV dataset of sports team tryout applications.
+
+Your task is to audit the dataset for payment anomalies and discrepancies. Specifically, look for two types of issues:
+
+1. High-Risk Rows: Look for applicants where ""Check In"" is True but ""Payment Confirmation"" is False (people checked in who haven't paid).
+2. Processing Discrepancies: Look for applicants where ""Payment Confirmation"" is True but ""Check In"" is False (people who have paid but are not marked as checked in).
+
+Please output your findings in the following format:
+
+### 🚨 High-Risk (Checked In but Unpaid)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+### ⚠️ Processing Discrepancies (Paid but Not Checked In)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+Here is the raw data:",Claude,Sonnet 5.5 (Medium),2026-11-03 14:17,"🚨 High-Risk (Checked In but Unpaid)
+Total Found: 2
+List of Applicants:
+Name: Eric Jun Seagren | Email: ejs19@uw.edu | Payment Method: Cash
+Name: Xingda | Email: xlyu18@uw.edu | Payment Method: Zelle: husky.badminton@gmail.com
+
+⚠️ Processing Discrepancies (Paid but Not Checked In)
+Total Found: 0
+List of Applicants: None",yes,Same result and format as runs 1 and 2.
+4,"You are a data evaluation assistant. I am providing a raw CSV dataset of sports team tryout applications.
+
+Your task is to audit the dataset for payment anomalies and discrepancies. Specifically, look for two types of issues:
+
+1. High-Risk Rows: Look for applicants where ""Check In"" is True but ""Payment Confirmation"" is False (people checked in who haven't paid).
+2. Processing Discrepancies: Look for applicants where ""Payment Confirmation"" is True but ""Check In"" is False (people who have paid but are not marked as checked in).
+
+Please output your findings in the following format:
+
+### 🚨 High-Risk (Checked In but Unpaid)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+### ⚠️ Processing Discrepancies (Paid but Not Checked In)
+* **Total Found:** [Count]
+* **List of Applicants:** [Provide Name, Email, and Payment Method if any exist, or state ""None""]
+
+Here is the raw data:",Gemini,Gemini Auto,2026-11-03 14:28,"Audit Summary
+Category | Count
+Total applications reviewed | 80
+Checked in but unpaid | 2
+Paid but not checked in | 0
+No discrepancies in either category | 78
+
+Recommended follow-up:
+Verify whether Eric Jun Seagren paid in cash and whether the payment was recorded.
+Verify whether Xingda's Zelle payment was received and update the payment confirmation if appropriate.
+
+Audit based on the Payment Confirmation and Check In columns in the uploaded spreadsheet. No other payment statuses were inferred.",yes,"Same two names flagged, but did not use the requested format. Added a summary table (80 total, 2 / 0 / 78) and follow-up suggestions."
